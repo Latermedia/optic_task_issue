@@ -1,0 +1,11 @@
+name: "my project"
+tasks:
+  start:
+    command: "rails s --port $PORT"
+    inboundUrl: http://localhost:3000
+  docs:
+    targetUrl: http://localhost:7368
+    inboundUrl: http://localhost:5000
+  specs:
+    useTask: docs
+    command: bundle exec rspec spec/acceptance
